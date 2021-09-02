@@ -15,7 +15,7 @@ RUN set -ex \
   && rm package* generate-cert.sh \
   # Correct User's file access
   && chown -R node:node /app \
-  && chmod +r /app/privkey.pem
+  && chmod a+r /app/privkey.pem
 
 FROM node:14-alpine AS final
 WORKDIR /app
